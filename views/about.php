@@ -1,1 +1,1 @@
-<h1><?= $Parameter ?></h1>
+<h1><?= $parameter ?></h1>
