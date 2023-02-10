@@ -17,13 +17,18 @@ class Database{
     private function end(){
         $this->connection = null;
     }
-    public function select($sql,$parameters=null){
+    public function execute($sql,$parameters=null){
         $this->start();
 
         try{
            $run = $this->connection->prepare($sql);
-           !empty($parameters)? $run->execute($parameters) : $run->execute();
-           $response = $run->fetchAll(PDO::FETCH_CLASS); 
+           !empty($parameters)? $run->execute() : $run->execute($parameters);
+           if(preg_match("/^SELECT/i",$sql)){
+             $response = $run->fetchAll(PDO::FETCH_CLASS); 
+           }
+          else{
+            $response = 'success';
+          }
             
         }
         catch(PDOException $e){
