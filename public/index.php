@@ -1,4 +1,5 @@
 <?php
+require('../vendor/autoload.php');
 include("../core/classes/Functions.php");
 $routes = [
     'home',
@@ -18,5 +19,22 @@ foreach($routes as $route){
         }
     } 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
