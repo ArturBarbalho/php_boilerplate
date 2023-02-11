@@ -3,33 +3,33 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 //require('../../vendor/autoload.php');
-include('../config.php');
+//require('../config.php');
 
 class Mailer{
-    public function send(){
+    public function send($destinatary,$subject,$body){
        $mail = new PHPMailer(true); 
-       try {
+       try { 
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
         $mail->isSMTP();                                            
         $mail->Host       = MAIL_HOST;                    
         $mail->SMTPAuth   = true;                                  
         $mail->Username   = MAIL_USER;                     
         $mail->Password   = MAIL_PASS;                               
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
+        $mail->SMTPSecure = 'tsl';           
         $mail->Port       = MAIL_PORT;                                  
     
         //Recipients
         $mail->setFrom(MAIL_USER, MAIL_NAME);
-        $mail->addAddress('joe@example.net', 'Joe User');  
+        $mail->addAddress($destinatary, '');  
     
         //Attachments
    /*   $mail->addAttachment('/var/tmp/file.tar.gz');         
         $mail->addAttachment('/tmp/image.jpg', 'new.jpg');   */
     
         //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Here is the subject';
-        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->isHTML(true);                                  
+        $mail->Subject = $subject;
+        $mail->Body    = $body;
     
         $mail->send();
         echo 'Message has been sent';
