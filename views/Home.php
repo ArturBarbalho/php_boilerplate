@@ -1,11 +1,18 @@
 <?php
-include('../config.php');
-include('../core/classes/Database.php');
-include('../core/classes/Mailer.php');
+// include('../config.php');
+// include('../core/classes/Database.php');
+// include('../core/classes/Mailer.php');
+include('../core/classes/PDF.php');
 
-$db = new Database();
-$res = $db->execute('SELECT * FROM clients');  
-//$res = $db->select("INSERT INTO clients VALUES(0,'chico')");
+/*database call */
+//$db = new Database();
+//$res = $db->execute('SELECT * FROM clients');  
+//$res = $db->execute("INSERT INTO clients VALUES(0,'chico')");
 //print_r($res);
 
+/*pdf */
+$pdf = new PDF();
+//$pdf->set_template(getcwd().'/assets/templates_pdf');
+$pdf->write('zekkmargo');
+$pdf->show_pdf();
 

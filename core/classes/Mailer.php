@@ -15,7 +15,7 @@ class Mailer{
         $mail->SMTPAuth   = true;                                  
         $mail->Username   = MAIL_USER;                     
         $mail->Password   = MAIL_PASS;                               
-        $mail->SMTPSecure = 'tsl';           
+        $mail->SMTPSecure = MAIL_SMTP;           
         $mail->Port       = MAIL_PORT;                                  
     
         //Recipients
