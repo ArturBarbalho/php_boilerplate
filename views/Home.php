@@ -16,3 +16,5 @@ $pdf = new PDF();
 $pdf->write('zekkmargo');
 $pdf->show_pdf();
 
+//remover arquivo (usar para apagar pdf gerado dps de ter enviado)
+unlink('caminho');
