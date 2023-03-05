@@ -36,5 +36,5 @@ class PDF{
     }
     public function set_template($template){
         $this->pdf->SetDocTemplate($template);
-    }
+    } 
 }
