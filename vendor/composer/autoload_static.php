@@ -30,6 +30,10 @@ class ComposerStaticInit8613be2b03eb69317c21f187627d324c
         array (
             'Http\\Message\\' => 13,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'D' => 
         array (
             'DeepCopy\\' => 9,
@@ -64,6 +68,10 @@ class ComposerStaticInit8613be2b03eb69317c21f187627d324c
         'Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/message-factory/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'DeepCopy\\' => 
         array (

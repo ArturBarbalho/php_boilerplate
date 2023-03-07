@@ -7,3 +7,5 @@
     <input type="file" name="file" accept="image/png, image/jpeg">
     <button type="submit" >Send</button>
 </form>
+
+<?php

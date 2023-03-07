@@ -14,3 +14,5 @@ const MAIL_NAME = '';
 const MAIL_SMTP = 'tsl';
 
 //d_A385xrSQ_Z75U
+
+const JWT_KEY = 'ardfgujfhg34lkfsnv';
