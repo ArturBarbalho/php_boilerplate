@@ -12,6 +12,7 @@
     <!-- app css -->
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/<?=$page?>.css">
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
 </head>
 <body>
     

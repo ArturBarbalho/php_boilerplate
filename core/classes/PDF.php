@@ -24,9 +24,10 @@ class PDF{
         $this->pdf->WriteHTML($this->html);
         $this->pdf->Output();
     }
-    public function save_pdf(){
+    public function save_pdf($file_name){
         $this->pdf->WriteHTML($this->html);
-        $this->pdf->Output('endereço');
+        $this->pdf->Output("endereço . $file_name");
+        
     }
     public function write($body){
         $this->html .= "<p>$body</p>";

@@ -1,7 +1,9 @@
 
-<h1><?= $parameter ?></h1>
-
 <!-- UPLOAD -->
+<?php
+$id = htmlspecialchars($_GET['id']);
+
+?>
 <form enctype="multipart/form-data" method="POST" action="../core/controllers/upload.php">
     <label for="">Select the file</label>
     <input type="file" name="file" accept="image/png, image/jpeg">
@@ -9,7 +11,15 @@
 </form>
 
 <div id="countDiv">
-<button class="btn btn-primary" @click="startCount">...</button>
-<div>{{count}}</div>
+<button class="btn btn-primary" @click="startCount('<?= $id ?>')">...</button>
+<div >{{count}}</div>
 </div>
-<?php
+<div><?= $idem ?></div>
+
+<script>
+   const id = "<?= $id ?>"
+
+    console.log(id)
+</script>
+
+
